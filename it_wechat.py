@@ -4,6 +4,7 @@ import numpy as np
 import itchat
 import matplotlib.pyplot as plt
 
+# 登录微信，这里会弹出二维码，手机扫一扫即可登录
 itchat.login()
 
 friends = itchat.get_friends(update=True)[0:]
@@ -72,6 +73,7 @@ Signature = get_var("Signature")
 # 		"City": City, "Signature": Signature}
 # frame = DataFrame(data)
 # frame.to_csv('data.csv', encoding='utf_8_sig', index=True)
+
 
 # ***-----统计好友城市分布-----***
 city_dict = {}
