@@ -103,8 +103,6 @@ for a,b in zip(x,y):
 	plt.text(a, b+0.06, '%.2f' % b, ha='center', va='bottom', fontsize=9)
 
 
-
-
 # ***-----根据个性签名绘制词云图-----***
 # 通过正则匹配清洗数据
 import re 
@@ -120,15 +118,6 @@ text = "".join(Signature_list)
 import jieba 
 wordlist = jieba.cut(text, cut_all=False)
 word_space_split = " ".join(wordlist)
-
-# 绘制分词数量直方图
-# word_lis = {}
-# for i in wordlist:
-# 	if i in word_lis:
-# 		word_lis[i] += 1
-# 	else: 
-# 		word_lis[i] = 1
-# print word_lis
 
 # 调包进行词云图绘制
 from wordcloud import WordCloud, ImageColorGenerator
