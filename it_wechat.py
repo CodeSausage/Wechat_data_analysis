@@ -68,11 +68,11 @@ Signature = get_var("Signature")
 
 # Excel 打开中文乱码问题 未解决
 # 不过可以通过Excel->数据->文本导入的形式，将csv文件导入，就可以避免乱码问题
-# from pandas import DataFrame
-# data = {"NickName": NickName, "Sex": Sex, "Province": Province,
-# 		"City": City, "Signature": Signature}
-# frame = DataFrame(data)
-# frame.to_csv('data.csv', encoding='utf_8_sig', index=True)
+from pandas import DataFrame
+data = {"NickName": NickName, "Sex": Sex, "Province": Province,
+	"City": City, "Signature": Signature}
+frame = DataFrame(data)
+frame.to_csv('data.csv', encoding='utf_8_sig', index=True)
 
 
 # ***-----统计好友城市分布-----***
